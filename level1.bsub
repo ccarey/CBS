@@ -1,0 +1,7 @@
+#!/bin/sh
+#BSUB -u ccarey@college.harvard.edu
+#BSUB -q ncf
+#BSUB -J hc
+#BSUB -o word_task_hc_job.out
+
+matlab -nodisplay -r "run_level1_package('subjects.txt', 'word_task_first_level_job','/ncf/snp/08/projects/yaass/','word_task/', 'word_task_analysis/standard_space/','HC');"

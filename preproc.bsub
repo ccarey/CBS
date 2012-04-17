@@ -1,0 +1,7 @@
+#!/bin/sh
+#BSUB -u ccarey@college.harvard.edu
+#BSUB -q ncf
+#BSUB -J word_task_hc
+#BSUB -o word_task_job_hc.out
+
+matlab -nodisplay -r "run_preproc_package('subjects.txt','preproc_word_task_job','/ncf/snp/08/projects/yaass/','word_task/','HC');"

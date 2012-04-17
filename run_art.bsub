@@ -1,0 +1,7 @@
+#!/bin/sh
+#BSUB -u ccarey@college.harvard.edu
+#BSUB -q ncf
+#BSUB -J word_task_run_art
+#BSUB -o word_task_run_art_job.out
+
+matlab -nodisplay -r "addpath /ncf/apps/spm8; snp_art_batch('subjects.txt','/ncf/snp/04/SCORE/', 'word_task_analysis/standard_space',[0 1 0 2 3],'HC');"
