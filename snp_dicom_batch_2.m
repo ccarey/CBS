@@ -74,7 +74,7 @@ fprintf('\nConverting DICOMS for subject %s in %s \n',subjID,rootdir);
 
 % % find dicoms to be converted, read headers, then convert
 cd(fullfile(rootdir,'RAW'))
-dicom_files = spm_get('files',fullfile(rootdir,'RAW'),'*');
+dicom_files = spm_select('list',fullfile(rootdir,'RAW'),'.*');
 hdrs = spm_dicom_headers(dicom_files);
 spm_dicom_convert(hdrs,'all');
 clear dicom_files hdrs;
